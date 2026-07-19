@@ -8,6 +8,9 @@ WORKDIR /src/kopia-healthcheck/
 RUN <<EOF
   set -ex
 
+  apk --no-cache add \
+    git
+
   install -dm0755 /rootfs/usr/local/bin
   go build \
     -ldflags "-X main.version=$(git describe --tags --always || echo dev)" \
