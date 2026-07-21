@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Publish Docker image
-        uses: Luzifer/actions/docker-publish@cc7387871607fbf850bdd3cbc6a2683562f829dc # develop
+        uses: Luzifer/actions/docker-publish@032da29d4fb988e8209bed077a1c3d834468431a # develop
         with:
           image_name: ghcr.io/luzifer/kopia-healthcheck
           registry_pass: ${{ secrets.GITHUB_TOKEN }}
